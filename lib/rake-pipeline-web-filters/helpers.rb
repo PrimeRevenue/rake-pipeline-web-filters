@@ -87,6 +87,12 @@ module Rake::Pipeline::Web::Filters
       filter(Rake::Pipeline::Web::Filters::YUICssFilter, *args, &block)
     end
 
+    # Add a new {RubyCssFilter} to the pipeline.
+    # @see RubyCssFilter#initialize
+    def ruby_css(*args, &block)
+      filter(Rake::Pipeline::Web::Filters::RubyCssFilter, *args, &block)
+    end
+
     # Add a new {GzipFilter} to the pipeline.
     # @see GzipFilter#initialize
     def gzip(&block)
